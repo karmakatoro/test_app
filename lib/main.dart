@@ -15,7 +15,14 @@ class MyApp extends StatelessWidget {
       //   primarySwatch: Colors.blue,
       // ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Aura Test App"),
+        ),
+        body: const Center(
+          child: Text("Bienvenue sur cete foutue app de merde"),
+        ),
+      ),
     );
   }
 }
