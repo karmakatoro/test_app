@@ -13,13 +13,13 @@ class _EventPageState extends State<EventPage> {
       "speaker": "Trez Kit",
       "date": "17h00-18h00",
       "subject": "La programmation web et mobile",
-      "avatar": "c2"
+      "avatar": "logo"
     },
     {
       "speaker": "Dorcas Promesse",
       "date": "17h30-18h00",
       "subject": "Au coeur de la programmation C#",
-      "avatar": "c3"
+      "avatar": "logo-dark"
     }
   ];
 
@@ -40,7 +40,7 @@ class _EventPageState extends State<EventPage> {
             final date = event['date'];
             return Card(
               child: ListTile(
-                leading: Image.asset("assets/images/$avatar.jpg"),
+                leading: Image.asset("assets/images/$avatar.png"),
                 title: Text("$speaker - $date"),
                 subtitle: Text("$subject"),
                 trailing: Icon(Icons.info),
