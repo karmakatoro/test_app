@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         children: const [
           Text(
             "Aura Test App 2023",
-            style: TextStyle(fontSize: 42),
+            style: TextStyle(fontSize: 42, fontFamily: "Inter"),
           ),
           Text(
             "Salon informatique du 27 mars au 3 avril 2023",
