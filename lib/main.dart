@@ -53,10 +53,17 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontFamily: "Inter"),
               textAlign: TextAlign.center),
           const Text(
-            "Salon informatique du 27 mars au 3 avril 2023",
+            "Salon virtuel de l'informatique du 27 mars au 3 avril 2023",
             style: TextStyle(fontSize: 18),
             textAlign: TextAlign.center,
-          )
+          ),
+          Padding(padding: EdgeInsets.all(10)),
+          ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Colors.green)),
+            onPressed: () => print("Coucou"),
+            child: Text("Planning", style: TextStyle(fontSize: 16)),
+          ),
         ],
       )),
     );
