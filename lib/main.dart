@@ -9,8 +9,34 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    return MaterialApp(home: HomePage());
+  }
+}
+
+class EventPage extends StatelessWidget {
+  const EventPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Planning du salon"),
+      ),
+      body: Center(
+        child: Text("Prochainement disponible"),
+      ),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Aura Test App"),
       ),
@@ -18,18 +44,21 @@ class MyApp extends StatelessWidget {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset("assets/images/logo-dark.png"),
-          const Text(
-            "Aura Test App 2023",
-            style: TextStyle(fontSize: 42, fontFamily: "Inter"),
+          Image.asset(
+            "assets/images/logo-dark.png",
+            width: 60,
+            height: 60,
           ),
+          const Text("Aura Test App 2023",
+              style: TextStyle(fontSize: 24, fontFamily: "Inter"),
+              textAlign: TextAlign.center),
           const Text(
             "Salon informatique du 27 mars au 3 avril 2023",
-            style: TextStyle(fontSize: 30),
+            style: TextStyle(fontSize: 18),
             textAlign: TextAlign.center,
           )
         ],
       )),
-    ));
+    );
   }
 }
