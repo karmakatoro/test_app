@@ -17,12 +17,13 @@ class MyApp extends StatelessWidget {
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          Text(
+        children: [
+          Image.asset("assets/images/logo-dark.png"),
+          const Text(
             "Aura Test App 2023",
             style: TextStyle(fontSize: 42, fontFamily: "Inter"),
           ),
-          Text(
+          const Text(
             "Salon informatique du 27 mars au 3 avril 2023",
             style: TextStyle(fontSize: 30),
             textAlign: TextAlign.center,
