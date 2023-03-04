@@ -25,29 +25,24 @@ class _EventPageState extends State<EventPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Planning du salon"),
-      ),
-      body: Center(
-        child: ListView.builder(
-          itemCount: events.length,
-          itemBuilder: (context, index) {
-            final event = events[index];
-            final avatar = event['avatar'];
-            final speaker = event['speaker'];
-            final subject = event['subject'];
-            final date = event['date'];
-            return Card(
-              child: ListTile(
-                leading: Image.asset("assets/images/$avatar.jpg"),
-                title: Text("$speaker - $date"),
-                subtitle: Text("$subject"),
-                trailing: Icon(Icons.info),
-              ),
-            );
-          },
-        ),
+    return Center(
+      child: ListView.builder(
+        itemCount: events.length,
+        itemBuilder: (context, index) {
+          final event = events[index];
+          final avatar = event['avatar'];
+          final speaker = event['speaker'];
+          final subject = event['subject'];
+          final date = event['date'];
+          return Card(
+            child: ListTile(
+              leading: Image.asset("assets/images/$avatar.jpg"),
+              title: Text("$speaker - $date"),
+              subtitle: Text("$subject"),
+              trailing: const Icon(Icons.info),
+            ),
+          );
+        },
       ),
     );
   }
