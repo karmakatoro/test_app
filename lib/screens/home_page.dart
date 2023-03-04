@@ -25,18 +25,7 @@ class HomePage extends StatelessWidget {
           style: TextStyle(fontSize: 18),
           textAlign: TextAlign.center,
         ),
-        Padding(padding: EdgeInsets.only(top: 10)),
-        ElevatedButton.icon(
-          style: ButtonStyle(
-              padding: MaterialStatePropertyAll(EdgeInsets.all(15)),
-              backgroundColor: MaterialStatePropertyAll(Colors.green)),
-          onPressed: () {
-            Navigator.push(context,
-                PageRouteBuilder(pageBuilder: (_, __, ___) => EventPage()));
-          },
-          label: Text("Planning", style: TextStyle(fontSize: 16)),
-          icon: Icon(Icons.calendar_month),
-        ),
+        const Padding(padding: EdgeInsets.only(top: 10)),
       ],
     ));
   }
