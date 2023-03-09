@@ -11,6 +11,7 @@ class _AddEventPageState extends State<AddEventPage> {
   final _formKey = GlobalKey<FormState>();
   final nameConfController = TextEditingController();
   final speakerNameController = TextEditingController();
+  String selectedConfType = "talk";
 
   @override
   void dispose() {
@@ -78,8 +79,16 @@ class _AddEventPageState extends State<AddEventPage> {
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                   ),
-                  value: 'talk',
-                  onChanged: (value) {}),
+                  value: selectedConfType,
+                  onChanged: (value) {
+                    setState(() {
+                      selectedConfType = value!;
+                    });
+                  }),
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 10),
+              child: DateTimeFormField(),
             ),
             SizedBox(
               width: double.infinity,
