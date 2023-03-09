@@ -8,20 +8,36 @@ class AddEventPage extends StatefulWidget {
 }
 
 class _AddEventPageState extends State<AddEventPage> {
+  final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       child: Form(
+        key: _formKey,
         child: Column(
           children: [
-            TextFormField(
-              decoration: InputDecoration(
-                  labelText: 'Nom de la conference',
-                  hintText: 'Entrez le nom de la conferance',
-                  border: OutlineInputBorder()),
+            Container(
+              margin: EdgeInsets.only(bottom: 10),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    labelText: 'Nom de la conference',
+                    hintText: 'Entrez le nom de la conferance',
+                    border: OutlineInputBorder()),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Champ requis";
+                  }
+                  return null;
+                },
+              ),
             ),
-            ElevatedButton(onPressed: () {}, child: Text("Envoyer"))
+            SizedBox(
+              width: double.infinity,
+              height: 50,
+              child: ElevatedButton(
+                  onPressed: () {}, child: const Text("Envoyer")),
+            ),
           ],
         ),
       ),
