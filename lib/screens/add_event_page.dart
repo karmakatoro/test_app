@@ -58,6 +58,20 @@ class _AddEventPageState extends State<AddEventPage> {
                 controller: speakerNameController,
               ),
             ),
+            DropdownButton(items: const [
+              DropdownMenuItem(
+                child: Text("Talk Show"),
+                value: "talk",
+              ),
+              DropdownMenuItem(
+                child: Text("Talk Show"),
+                value: "demo",
+              ),
+              DropdownMenuItem(
+                child: Text("Talk Show"),
+                value: "partner",
+              ),
+            ], onChanged: (value) {}),
             SizedBox(
               width: double.infinity,
               height: 50,
